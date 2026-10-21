@@ -20,3 +20,4 @@ data/runs/*
 # firmware build output
 edge/firmware/.pio/
 edge/firmware/build/
+TwinGuard_Member4_Project/signing_key.txt

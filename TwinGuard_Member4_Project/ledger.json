@@ -38,5 +38,356 @@
     "entry_hash": "6760d6827ea36ca7a9993098f2216eb327cccce4148eaafd9ccfeb71df78d279",
     "signature": "U6fbxeKmWX/DrHLhUZSZFROWPCJPO8QN789P40IMwbqb6nC1E/LDcOT1ERXbqhUOk+V9VkaqdzU6kSXOef8hAw==",
     "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 3,
+    "timestamp": "2026-10-21T13:30:30+00:00",
+    "previous_hash": "6760d6827ea36ca7a9993098f2216eb327cccce4148eaafd9ccfeb71df78d279",
+    "payload": {
+      "event": "COMPATIBILITY_CHECK",
+      "details": {
+        "component_id": "TEMP_001",
+        "component": "Temperature Sensor A",
+        "overall": "PASS",
+        "reason": "All demo rules passed.",
+        "rule_failures": []
+      }
+    },
+    "entry_hash": "6e962e848ce1496160a7e60ef5c8ae729a2136a27ee4c9ba6870995f0e99bc2a",
+    "signature": "JY75ezYN8Dog/ZnN+Wj0ZsM26W1e21pSvzCuTsWqL8yKd7lIa4aOACvU2heSUFS8DxcP0QdZdMiknXovl+hHCg==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 4,
+    "timestamp": "2026-10-21T13:59:26+00:00",
+    "previous_hash": "6e962e848ce1496160a7e60ef5c8ae729a2136a27ee4c9ba6870995f0e99bc2a",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "confidence": 85,
+        "evidence": {
+          "reference_comparison": false,
+          "sensor_readings": false,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "",
+        "recommendation": "",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 85,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "INCONCLUSIVE",
+          "reasons": [
+            "Required evidence is missing: reference_comparison.",
+            "Required evidence is missing: sensor_readings."
+          ]
+        }
+      }
+    },
+    "entry_hash": "1447acbfcae723e0ec67db70b3f1289faf0612931b64eada0e38257f0c3303d0",
+    "signature": "eLseyQeIQt9eQLkC/c52h4whMR2mOXAM2eYuce5reCV/8gCRUH68EMqT8toTDC5W1UGhLAox8ePW59xYnQLVAg==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 5,
+    "timestamp": "2026-10-21T14:22:41+00:00",
+    "previous_hash": "1447acbfcae723e0ec67db70b3f1289faf0612931b64eada0e38257f0c3303d0",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "confidence": 85,
+        "evidence": {
+          "reference_comparison": false,
+          "sensor_readings": true,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "Sensor reading differs from reference measurement",
+        "recommendation": "Recalibrate the sensor and repeat the measurement",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 85,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "INCONCLUSIVE",
+          "reasons": [
+            "Required evidence is missing: reference_comparison."
+          ]
+        }
+      }
+    },
+    "entry_hash": "34ee1e21ce5aa0dcbe3b67610bf99e86b1f8d96fd8f7491f7796d4b585b523e7",
+    "signature": "8VTOisXF0vQbqymZQebjob/Zkob+eVYwOwPciy0BmLRwhRKO//mBgRepMdXLLmfiRubAVap7ir8+aziVJ6PkCQ==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 6,
+    "timestamp": "2026-10-21T14:23:46+00:00",
+    "previous_hash": "34ee1e21ce5aa0dcbe3b67610bf99e86b1f8d96fd8f7491f7796d4b585b523e7",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "confidence": 85,
+        "evidence": {
+          "reference_comparison": true,
+          "sensor_readings": true,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "Sensor reading differs from reference measurement",
+        "recommendation": "Recalibrate the sensor and repeat the measurement",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 85,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "SUPPORTED",
+          "reasons": []
+        }
+      }
+    },
+    "entry_hash": "202b094871a0fe53b640cad93f822f7ea87d6daa84fde66940c0ce064f2421a3",
+    "signature": "qc4mQjkNlV+WxbsCMbmJIjOz/YbTBCJ3cmA8VaFY+qczowXPXgsAoQkaLdEL2nW/gCDF/PQLoBZeNcOy8avNAg==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 7,
+    "timestamp": "2026-10-21T14:24:30+00:00",
+    "previous_hash": "202b094871a0fe53b640cad93f822f7ea87d6daa84fde66940c0ce064f2421a3",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "confidence": 85,
+        "evidence": {
+          "reference_comparison": true,
+          "sensor_readings": true,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "Sensor reading differs from reference measurement",
+        "recommendation": "Recalibrate the sensor and repeat the measurement",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 85,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "SUPPORTED",
+          "reasons": []
+        }
+      }
+    },
+    "entry_hash": "dfc9ee9626d66574d9aa3fcffcddf21b10523dd9a1a163259d444884148dbaab",
+    "signature": "2OYQh11hVzLktyL1kpJ8/eRMBUF7Td1mr5U4iebffFI9sdcNfs8CXASw9l+sCdNII4VxDaXh8PJ2VLYlcxIzCA==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 8,
+    "timestamp": "2026-10-21T14:24:41+00:00",
+    "previous_hash": "dfc9ee9626d66574d9aa3fcffcddf21b10523dd9a1a163259d444884148dbaab",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "confidence": 85,
+        "evidence": {
+          "reference_comparison": true,
+          "sensor_readings": true,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "Sensor reading differs from reference measurement",
+        "recommendation": "Recalibrate the sensor and repeat the measurement",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 85,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "SUPPORTED",
+          "reasons": []
+        }
+      }
+    },
+    "entry_hash": "6ab9aa7878085c5e0210e45bf98df83b1f1c4cfbf874e4550ec9b8907fe610b6",
+    "signature": "65WwBTSQhh1UlY2VHlHyS6JyVCr8TktBs6ublMdvaj8O0+DmDVSqeeatH6VteIXeRxPLuaEmG6TvqXpxLcfKAg==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 9,
+    "timestamp": "2026-10-21T14:30:05+00:00",
+    "previous_hash": "6ab9aa7878085c5e0210e45bf98df83b1f1c4cfbf874e4550ec9b8907fe610b6",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "confidence": 85,
+        "evidence": {
+          "reference_comparison": true,
+          "sensor_readings": true,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "Sensor reading differs from reference measurement",
+        "recommendation": "Recalibrate the sensor and repeat the measurement",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 85,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "SUPPORTED",
+          "reasons": []
+        }
+      }
+    },
+    "entry_hash": "98356bff62e2d4d7f3e7262e0714b0b2786680c48fbac0ff4d7415a2bdac2413",
+    "signature": "45yDPXJKrdcAbOiAb1abqe/+7PEKl+a9jyD4gkrCg/770ErGtfQUY3hlzQmnM6ZTgUQrpSE3WyUbcUpeqaBgAQ==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 10,
+    "timestamp": "2026-10-21T14:30:23+00:00",
+    "previous_hash": "98356bff62e2d4d7f3e7262e0714b0b2786680c48fbac0ff4d7415a2bdac2413",
+    "payload": {
+      "event": "HUMAN_REVIEW",
+      "details": {
+        "diagnosis": "Sensor drift",
+        "reviewer": "Test Reviewer",
+        "decision": "Approve recommendation",
+        "validation_status": "SUPPORTED",
+        "observation": "Sensor reading differs from reference measurement"
+      }
+    },
+    "entry_hash": "707981267269be965c0b63b6d83921b0b0a90b5610f7539b79dd982cd5abb5f5",
+    "signature": "ekA/YGkw4q3IJz57GvNlBb8T9ldQv61bNo8n1QejRa03Wn5hEWhb1hV2+aCDKBOuyJWqR+iVoIYXI2W2YTsgBA==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 11,
+    "timestamp": "2026-10-21T15:01:10+00:00",
+    "previous_hash": "707981267269be965c0b63b6d83921b0b0a90b5610f7539b79dd982cd5abb5f5",
+    "payload": {
+      "event": "VALIDATION_GATE",
+      "details": {
+        "twin_status": "Untrusted",
+        "evidence_present": true,
+        "compatibility": "PASS",
+        "diagnosis_available": "Yes",
+        "gate_result": "INCONCLUSIVE",
+        "reasons": [
+          "Twin status is Untrusted"
+        ]
+      }
+    },
+    "entry_hash": "85afbec011a1691083f7794c1d0875830903b555b4344764e70ab2b5b765e903",
+    "signature": "TcdTeDyJP1drr6Ig4RFm8u+Y/EobrN/KUCJ9dRG9rrTD1lPSYluFTxwPWwvzq6e3hZYIOhDLVIK+blj6p16dCg==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 12,
+    "timestamp": "2026-10-21T15:36:45+00:00",
+    "previous_hash": "85afbec011a1691083f7794c1d0875830903b555b4344764e70ab2b5b765e903",
+    "payload": {
+      "event": "LIVE_RUN_STARTED",
+      "details": {
+        "seed": 42,
+        "fault": "normal",
+        "fault_start": 150,
+        "samples": 300
+      }
+    },
+    "entry_hash": "218bc8cc6d194095d98f02e2d2fbf89698a9ab313fc53a678e49cdb20517b439",
+    "signature": "20nzkRsqqN46e2V2QxtP8GkOL9y4V0oU0m+yCnmnVaLYXbhyAbn6UpPNEQDP6zI7XgDeqBC4Ipwo2PuH0lBQAw==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 13,
+    "timestamp": "2026-10-21T15:41:52+00:00",
+    "previous_hash": "218bc8cc6d194095d98f02e2d2fbf89698a9ab313fc53a678e49cdb20517b439",
+    "payload": {
+      "event": "TIME_MACHINE_REPLAY",
+      "details": {
+        "seed": 42,
+        "fault": "Sensor calibration error",
+        "fault_code": "sensor_drift",
+        "fault_start": 100,
+        "samples": 200,
+        "baseline_status": "Trusted",
+        "baseline_confidence": 100.0,
+        "fault_status": "Untrusted",
+        "fault_confidence": 0.0
+      }
+    },
+    "entry_hash": "9d5abf3ec11ecc6df12a44ab339333c223bb0bd0a2e0d5403ee97397e320f68f",
+    "signature": "9b8c96lmDPmtEn3MwOPZOGyMmx74LRI5U0J0GIR7+5Ws3e4dao8Xg7FSdz0c77t17gommlQRoZxQOZ2ZcthJBg==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 14,
+    "timestamp": "2026-10-21T15:49:46+00:00",
+    "previous_hash": "9d5abf3ec11ecc6df12a44ab339333c223bb0bd0a2e0d5403ee97397e320f68f",
+    "payload": {
+      "event": "INVESTIGATION_CREATED",
+      "details": {
+        "investigation_id": "2026-10-21T21:19:46.657367",
+        "diagnosis": "Sensor drift",
+        "confidence": 0.0,
+        "evidence": {
+          "reference_comparison": true,
+          "sensor_readings": true,
+          "communication_logs": false,
+          "configuration_check": false,
+          "battery_readings": false
+        },
+        "observation": "abcd",
+        "recommendation": "efgh",
+        "uncertainty": "",
+        "validation": {
+          "diagnosis": "Sensor drift",
+          "confidence": 0.0,
+          "required_evidence": [
+            "reference_comparison",
+            "sensor_readings"
+          ],
+          "validation_status": "INCONCLUSIVE",
+          "reasons": [
+            "Twin confidence 0 is below the calibrated threshold 84."
+          ]
+        },
+        "twin_status": "Untrusted",
+        "twin_confidence": 0.0
+      }
+    },
+    "entry_hash": "c0c5ab6d7eec58367007f2fd9ec706a0cb81a767a2cdbca611693767f3324ec1",
+    "signature": "VgyIqMzKQ1iDs7lBSPszpKPsTG9vB5tFz72OVUJqnoJ/p8Ne8X+FzP/AzisdRcvfUVkEwF100KVtLDRNmZWzDA==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
   }
 ]
