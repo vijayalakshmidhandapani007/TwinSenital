@@ -1,0 +1,42 @@
+[
+  {
+    "index": 1,
+    "timestamp": "2026-10-21T10:02:07+00:00",
+    "previous_hash": "GENESIS",
+    "payload": {
+      "event": "COMPATIBILITY_CHECK",
+      "details": {
+        "component_id": "TEMP_001",
+        "component": "Temperature Sensor A",
+        "overall": "PASS",
+        "reason": "All demo rules passed.",
+        "rule_failures": []
+      }
+    },
+    "entry_hash": "f32adff76ac991a8d779e489adb7b822fa4847e82fd3094973247973072e3405",
+    "signature": "15K1Q6KbSGVFn+q3JAyrMDhZw74q1lr1w43WIe+RCIUXDCCGtipqcNiPbxyaneAM9E/vH6Qz/G3Tew7QAn+dCw==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  },
+  {
+    "index": 2,
+    "timestamp": "2026-10-21T10:03:08+00:00",
+    "previous_hash": "f32adff76ac991a8d779e489adb7b822fa4847e82fd3094973247973072e3405",
+    "payload": {
+      "event": "COMPATIBILITY_CHECK",
+      "details": {
+        "component_id": "BAT_001",
+        "component": "Battery Pack A",
+        "overall": "FAIL",
+        "reason": "Voltage range 11.0\u201312.6 V is outside platform range 3.0\u20133.3 V; WiFi interface required but UART provided; Configuration must be 'standard'",
+        "rule_failures": [
+          "Voltage range 11.0\u201312.6 V is outside platform range 3.0\u20133.3 V",
+          "WiFi interface required but UART provided",
+          "Configuration must be 'standard'"
+        ]
+      }
+    },
+    "entry_hash": "6760d6827ea36ca7a9993098f2216eb327cccce4148eaafd9ccfeb71df78d279",
+    "signature": "U6fbxeKmWX/DrHLhUZSZFROWPCJPO8QN789P40IMwbqb6nC1E/LDcOT1ERXbqhUOk+V9VkaqdzU6kSXOef8hAw==",
+    "public_key": "h1cokolbfnelVZoWWKvmCtSsjuhpUVn9GhQaqiKJQGA="
+  }
+]

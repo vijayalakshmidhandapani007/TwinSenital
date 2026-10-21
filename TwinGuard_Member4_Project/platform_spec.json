@@ -1,0 +1,9 @@
+{
+  "platform_name": "TwinGuard Demo Platform",
+  "voltage_min": 3.0,
+  "voltage_max": 3.3,
+  "required_protocol": "MQTT",
+  "minimum_firmware": "1.0",
+  "required_interface": "WiFi",
+  "required_configuration": "standard"
+}
