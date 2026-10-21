@@ -1,0 +1,54 @@
+{
+  "components": [
+    {
+      "component_id": "TEMP_001",
+      "name": "Temperature Sensor A",
+      "voltage_min": 3.0,
+      "voltage_max": 3.3,
+      "firmware": "1.0",
+      "protocol": "MQTT",
+      "interface": "WiFi",
+      "configuration": "standard"
+    },
+    {
+      "component_id": "TEMP_002",
+      "name": "Temperature Sensor B",
+      "voltage_min": 3.0,
+      "voltage_max": 3.3,
+      "firmware": "1.1",
+      "protocol": "MQTT",
+      "interface": "WiFi",
+      "configuration": "standard"
+    },
+    {
+      "component_id": "BAT_001",
+      "name": "Battery Pack A",
+      "voltage_min": 11.0,
+      "voltage_max": 12.6,
+      "firmware": "1.0",
+      "protocol": "MQTT",
+      "interface": "UART",
+      "configuration": "power"
+    },
+    {
+      "component_id": "COM_001",
+      "name": "Communication Module A",
+      "voltage_min": 3.0,
+      "voltage_max": 3.3,
+      "firmware": "1.0",
+      "protocol": "MQTT",
+      "interface": "WiFi",
+      "configuration": "standard"
+    },
+    {
+      "component_id": "PWR_001",
+      "name": "Power Module A",
+      "voltage_min": 3.0,
+      "voltage_max": 3.3,
+      "firmware": "0.9",
+      "protocol": "HTTP",
+      "interface": "UART",
+      "configuration": "legacy"
+    }
+  ]
+}
