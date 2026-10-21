@@ -1,0 +1,12 @@
+{
+  "platforms": {
+    "TEST-PLATFORM-1": {
+      "min_voltage_v": 3.0,
+      "max_voltage_v": 5.0,
+      "supported_protocols": ["I2C", "UART"],
+      "supported_firmware": ["1.0"],
+      "supported_interfaces": ["UART", "I2C"],
+      "supported_configurations": ["standard", "low_power"]
+    }
+  }
+}

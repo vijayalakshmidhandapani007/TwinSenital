@@ -1,0 +1,18 @@
+{
+  "components": {
+    "SENSOR-A1": {
+      "voltage_v": 5.0,
+      "protocol": "I2C",
+      "firmware": "1.0",
+      "interface": "UART",
+      "configuration": "standard"
+    },
+    "SENSOR-B2": {
+      "voltage_v": 12.0,
+      "protocol": "SPI",
+      "firmware": "2.0",
+      "interface": "CAN",
+      "configuration": "high_power"
+    }
+  }
+}
