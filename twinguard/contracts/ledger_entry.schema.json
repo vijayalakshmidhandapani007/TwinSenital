@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LedgerEntry",
+  "description": "One append-only, hash-chained record of an AI-assisted investigation. hash = SHA-256 over the canonical JSON of this entry without the 'hash' field, including prev_hash.",
+  "type": "object",
+  "required": ["entry_id", "timestamp", "run_id", "prev_hash", "hash", "twin_version", "twin_confidence", "evidence_refs", "agents_used", "tools_used", "finding", "recommendation", "human_approval", "test_outcome", "gate_result", "gate_reasons"],
+  "additionalProperties": false,
+  "properties": {
+    "entry_id": { "type": "integer", "minimum": 0 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "run_id": { "type": "string" },
+    "prev_hash": { "type": "string" },
+    "hash": { "type": "string" },
+    "twin_version": { "type": "string" },
+    "twin_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "evidence_refs": { "type": "array", "items": { "type": "string" } },
+    "agents_used": { "type": "array", "items": { "type": "string" } },
+    "tools_used": { "type": "array", "items": { "type": "string" } },
+    "finding": {
+      "type": "object",
+      "required": ["label", "confirmed_observations", "possible_explanations", "insufficient_evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "enum": ["normal", "physical_fault", "cyber_event", "config_issue", "compatibility_issue", "inconclusive"] },
+        "confirmed_observations": { "type": "array", "items": { "type": "string" } },
+        "possible_explanations": { "type": "array", "items": { "type": "string" } },
+        "insufficient_evidence": { "type": "boolean" }
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "required": ["text", "uncertainty"],
+      "additionalProperties": false,
+      "properties": {
+        "text": { "type": "string" },
+        "uncertainty": { "type": "string", "enum": ["low", "medium", "high"] }
+      }
+    },
+    "human_approval": {
+      "type": ["object", "null"],
+      "required": ["approved_by", "decision", "timestamp"],
+      "additionalProperties": false,
+      "properties": {
+        "approved_by": { "type": "string" },
+        "decision": { "type": "string", "enum": ["approved", "rejected"] },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "test_outcome": { "type": ["string", "null"] },
+    "gate_result": { "type": "string", "enum": ["accepted", "inconclusive"] },
+    "gate_reasons": { "type": "array", "items": { "type": "string" } }
+  }
+}

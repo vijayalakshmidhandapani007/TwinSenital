@@ -1,0 +1,50 @@
+# Labelled scenarios. The labels are the ground truth for every evaluation script.
+# Parameters are deliberately generic engineering values for a non-weapon test setup.
+scenarios:
+  - id: S1
+    name: normal_run
+    label: normal
+    description: Fault-free run used for baseline fitting and false-alarm measurement.
+    expected_twin_state: Trusted
+
+  - id: S2
+    name: sensor_drift
+    label: physical_fault
+    description: Voltage sensor reading drifts slowly upward while true behaviour is unchanged.
+    expected_twin_state: Degraded
+    injection: {signal: voltage_v, kind: gradual_drift, rate_v_per_s: 0.004, starts_at_s: 150}
+
+  - id: S3
+    name: battery_degradation
+    label: physical_fault
+    description: Battery discharges faster than the fitted model predicts.
+    expected_twin_state: Degraded
+    injection: {signal: voltage_v, kind: faster_discharge, factor: 1.5, starts_at_s: 120}
+
+  - id: S4
+    name: communication_loss
+    label: physical_fault
+    description: Latency rises sharply and packets drop for a period.
+    expected_twin_state: Degraded
+    injection: {signal: latency_ms, kind: spike_and_dropout, duration_s: 20, starts_at_s: 100}
+
+  - id: S5
+    name: config_inconsistency
+    label: config_issue
+    description: Configuration version changes without an authorisation record and behaviour shifts.
+    expected_twin_state: Degraded
+    injection: {kind: config_change, authorised: false, new_version: cfg-1.1.0, starts_at_s: 140}
+
+  - id: S6
+    name: unauthorised_message
+    label: cyber_event
+    description: A simulated message from an unknown client coincides with a step change in a reading.
+    expected_twin_state: Untrusted
+    injection: {kind: unknown_client_message, signal: temperature_c, step_c: 8.0, starts_at_s: 130}
+
+  - id: S7
+    name: incompatible_module_swap
+    label: compatibility_issue
+    description: A sensor module whose documented power draw exceeds the platform limit is selected.
+    expected_twin_state: Degraded
+    injection: {kind: module_swap, module_id: SENSOR-B2, platform_id: TEST-PLATFORM-1}

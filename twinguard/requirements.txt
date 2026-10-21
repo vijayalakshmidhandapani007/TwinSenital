@@ -1,0 +1,15 @@
+# Shared Python dependencies. Pin exact versions after the first successful install.
+fastapi
+uvicorn
+paho-mqtt
+psycopg[binary]
+pydantic
+numpy
+pandas
+scipy
+networkx
+langgraph
+streamlit
+pyyaml
+jsonschema
+pytest

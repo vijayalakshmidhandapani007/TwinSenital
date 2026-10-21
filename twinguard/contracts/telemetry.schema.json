@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TelemetryMessage",
+  "description": "One telemetry sample from the ESP32 bench or the UAS simulator. MQTT topic: twinguard/telemetry/<source>",
+  "type": "object",
+  "required": ["schema_version", "timestamp", "source", "run_id", "seq", "voltage_v", "temperature_c", "latency_ms", "config_version"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "source": { "type": "string", "enum": ["esp32_bench", "uas_sim"] },
+    "run_id": { "type": "string" },
+    "seq": { "type": "integer", "minimum": 0 },
+    "voltage_v": { "type": "number" },
+    "temperature_c": { "type": "number" },
+    "latency_ms": { "type": "number", "minimum": 0 },
+    "config_version": { "type": "string" }
+  }
+}

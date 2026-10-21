@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-21T10:02:30Z", "run_id": "mock-drift-001", "twin_version": "twin-0.1", "predicted": {"voltage_v": 12.3, "temperature_c": 28.0}, "observed": {"voltage_v": 12.5, "temperature_c": 28.1}, "residuals": {"voltage_v": 0.2, "temperature_c": 0.1}, "confidence": 0.46, "state": "Degraded", "in_validated_range": true, "flags": ["voltage_residual_rising"]}

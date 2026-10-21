@@ -1,0 +1,22 @@
+# secrets and local config
+.env
+*.pem
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# data and tooling
+data/runs/*
+!data/runs/.gitkeep
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# firmware build output
+edge/firmware/.pio/
+edge/firmware/build/

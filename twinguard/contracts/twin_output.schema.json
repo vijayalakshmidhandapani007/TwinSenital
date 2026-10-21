@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TwinOutput",
+  "description": "Digital twin result for one time step. Produced by twin/, consumed by agents/, ledger/ and dashboard/.",
+  "type": "object",
+  "required": ["timestamp", "run_id", "twin_version", "predicted", "observed", "residuals", "confidence", "state", "in_validated_range", "flags"],
+  "additionalProperties": false,
+  "properties": {
+    "timestamp": { "type": "string", "format": "date-time" },
+    "run_id": { "type": "string" },
+    "twin_version": { "type": "string" },
+    "predicted": { "$ref": "#/$defs/signals" },
+    "observed": { "$ref": "#/$defs/signals" },
+    "residuals": { "$ref": "#/$defs/signals" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "state": { "type": "string", "enum": ["Trusted", "Degraded", "Untrusted"] },
+    "in_validated_range": { "type": "boolean" },
+    "flags": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "signals": {
+      "type": "object",
+      "required": ["voltage_v", "temperature_c"],
+      "additionalProperties": false,
+      "properties": {
+        "voltage_v": { "type": "number" },
+        "temperature_c": { "type": "number" }
+      }
+    }
+  }
+}

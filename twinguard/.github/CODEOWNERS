@@ -1,0 +1,16 @@
+# Replace the placeholders with each member's GitHub username.
+# Member 1: edge, simulator, backend | Member 2: twin
+# Member 3: agents, evaluation e2e   | Member 4: compat, ledger, dashboard shell
+
+/contracts/            @USERNAME_M1 @USERNAME_M2 @USERNAME_M3 @USERNAME_M4
+/edge/                 @USERNAME_M1
+/simulator/            @USERNAME_M1
+/backend/              @USERNAME_M1
+/infra/                @USERNAME_M1
+/twin/                 @USERNAME_M2
+/agents/               @USERNAME_M3
+/compat/               @USERNAME_M4
+/ledger/               @USERNAME_M4
+/dashboard/            @USERNAME_M4
+/evaluation/           @USERNAME_M3
+/docs/                 @USERNAME_M4
