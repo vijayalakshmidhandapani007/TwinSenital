@@ -61,5 +61,29 @@ if __name__ == "__main__":
             "COMPAT-SENSOR-B2-TEST-PLATFORM-1"
         ]
     )
+        # Test: Low twin confidence
+    low_confidence_result = evaluate_gate(
+        twin_confidence=0.40,
+        evidence_refs=[
+            "COMPAT-SENSOR-B2-TEST-PLATFORM-1"
+        ],
+        required_evidence=[
+            "COMPAT-SENSOR-B2-TEST-PLATFORM-1"
+        ]
+    )
+
+    print("\nLow Confidence Test:")
+    print(low_confidence_result)
+        # Test: Required evidence missing
+    missing_evidence_result = evaluate_gate(
+        twin_confidence=0.95,
+        evidence_refs=[],
+        required_evidence=[
+            "TELEMETRY-001"
+        ]
+    )
+
+    print("\nMissing Evidence Test:")
+    print(missing_evidence_result)
 
     print(result)
